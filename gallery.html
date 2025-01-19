@@ -1,39 +1,56 @@
 <!DOCTYPE html>
 <html>
 <style>
+    /* Reset margins and paddings */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
 
-.masonry {
-    column-count: 3; /* Number of columns */
-    column-gap: 25px; /* Space between columns */
-}
+    /* Gallery grid layout */
+    .gallery {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
+        gap: 20px; /* Reduced space between images */
+        padding: 20px; /* Add padding around the gallery */
+    }
 
-.masonry img {
-    width: 100%; /* Make images fit the column width */
-    margin-bottom: 25px; /* Space between rows */
-    break-inside: avoid-column; /* Prevent image breaking between columns */
-}
+    .gallery img {
+        width: 100%; /* Ensure images fit the width of their container */
+        height: 100%; /* Ensure images maintain their height */
+        object-fit: cover; /* Ensures images cover the space consistently */
+        border-radius: 10px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease; /* Only transition on scale and box-shadow */
+        transform-origin: center; /* Ensure scaling from the center */
+    }
 
-body {
-    background-image: url("annie-spratt-6a3nqQ1YwBw-unsplash.jpg");
-    background-repeat: repeat-x;
-    background-size: cover;
-    background-attachment: fixed;
-}
+    .gallery img:hover {
+        transform: scale(1.05); /* Scale the image on hover */
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5); /* Apply box-shadow without border changes */
+    }
 
-img:hover {
-    box-shadow: 12px 12px 12px rgba(0, 0, 0, 0.2), -5px -5px 5px rgba(0, 0, 1, 0.7);
-}
+    body {
+        background-image: url("annie-spratt-6a3nqQ1YwBw-unsplash.jpg");
+        background-repeat: repeat-x;
+        background-size: cover;
+        background-attachment: fixed;
+    }
 
+    h1 {
+        text-align: center;
+        color: #ffffff;
+        padding: 20px;
+        background-color: #59565f;
+    }
 </style>
-
-    
 
 <body>
 
-    <h1 style="text-align:center; color:#ffffff; padding:20px; background-color:#59565f;">
-        My Gallery
-    </h1>
-    <div class="masonry">
+    <h1>My Gallery</h1>
+
+    <!-- Grid gallery of images -->
+    <div class="gallery">
         <img src="francisco-terranova-jVrZgVhqsqs-unsplash.jpg" width="512" height="345">
         <img src="rafael-otaki-xeVovI3j2Zk-unsplash.jpg" width="400" height="600">
         <img src="shimoon-6liNQHL2Yjk-unsplash.jpg" width="394" height="493">
@@ -41,7 +58,15 @@ img:hover {
         <img src="IMG_0405.HEIC">
         <img src="IMG_0992.jpg">
         <img src="saffu-UEgo43quyCw-unsplash.jpg" width="458" height="687">
-    </div>
+        <img src="adam-azim-Uir7CQmmICM-unsplash.jpg">
+        <img src="zosia-szopka-j5HQf4MpXZQ-unsplash.jpg">
+        <img src="simon-l-mKsFAzUhvwQ-unsplash.jpg">
+        <img src="clayton-malquist-J35SUrd_2zc-unsplash.jpg">
+        <img src="ferdinand-stohr-MfdrElFEqiw-unsplash.jpg">
+        <img src="val-vesa-emQhXktfIAg-unsplash.jpg\"> 
+        <img src="hasham-shabbir-QZd8SB4I6BA-unsplash.jpg">
+        <img src="vivek-doshi-3G4lgBfHIIM-unsplash.jpg">
+        </div>
 
 </body>
 </html>
